@@ -10,7 +10,7 @@ const Map: React.FC<MapProps> = ({ mapCenter, locations }) => {
   const mapEle = useRef<HTMLDivElement>(null);
   const map = useRef<google.maps.Map>();
 
-  useEffect(() => {
+  /*useEffect(() => {
 
     map.current = new google.maps.Map(mapEle.current, {
       center: {
@@ -33,13 +33,13 @@ const Map: React.FC<MapProps> = ({ mapCenter, locations }) => {
         let infoWindow = new google.maps.InfoWindow({
           content: `<h5>${markerData.name}</h5>`
         });
-  
+
         let marker = new google.maps.Marker({
           position: new google.maps.LatLng(markerData.lat, markerData.lng),
           map: map.current!,
           title: markerData.name
         });
-  
+
         marker.addListener('click', () => {
           infoWindow.open(map.current!, marker);
         });
@@ -47,7 +47,7 @@ const Map: React.FC<MapProps> = ({ mapCenter, locations }) => {
     }
 
   }, [mapCenter, locations]);
-
+*/
   return (
     <div ref={mapEle} className="map-canvas"></div>
   );
